@@ -3,8 +3,6 @@ import { HiArrowRight } from "react-icons/hi";
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
-import profile from "../assets/my.png";
-import resume from "../assets/resume.pdf";
 
 
 const Hero = () => {
@@ -59,7 +57,7 @@ const Hero = () => {
           {/* Buttons */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 mt-10">
             <a href="#projects" className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-7 py-4 rounded-full font-semibold transition">View Projects<HiArrowRight /></a>
-            <a href={resume} target="_blank" className="flex items-center gap-2 border border-orange-500 hover:bg-orange-500 px-7 py-4 rounded-full transition">Download CV<FaDownload /></a>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" className="flex items-center gap-2 border border-orange-500 hover:bg-orange-500 px-7 py-4 rounded-full transition">Download CV<FaDownload /></a>
           </div>
 
           {/* Social Icons */}
@@ -79,7 +77,7 @@ const Hero = () => {
             {/* Outer Border */}
             <div className="absolute inset-0 rounded-full border-4 border-orange-500 shadow-[0_0_40px_rgba(249,115,22,0.35)]"></div>
             {/* Image */}
-            <img src={profile} alt="Husnain Javaid" className="w-full h-full rounded-full object-cover p-3"/>
+            <img src={`${import.meta.env.BASE_URL}my.png`} alt="Husnain Javaid" className="w-full h-full rounded-full object-cover p-3"/>
           </motion.div>
         </div>
       </div>
