@@ -1,4 +1,13 @@
 @import "tailwindcss";
-* {
-  outline: 1px solid red;
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

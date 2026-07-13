@@ -31,7 +31,7 @@ const Hero = () => {
 
   return (
     <section id="home"className="relative min-h-screen bg-linear-to-r from-[#16131D] via-[#241515] to-[#5A220F] text-white">
-      <div className="max-w-7xl mx-auto min-h-screen pt-24 lg:pt-20 px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
+      <div className="max-w-7xl mx-auto w-full min-h-screen pt-24 lg:pt-20 px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 overflow-hidden">
         {/* Left Side */}
         <div className=" lg:w-[48%] text-center lg:text-left">
           <p className="text-orange-400 font-semibold tracking-widest uppercase mt-3">
@@ -71,9 +71,15 @@ const Hero = () => {
         {/* Right Side */}
         <div className="lg:w-[52%] flex justify-center items-center relative">
           {/* Glow */}
-          <div className="absolute w-95 h-95 bg-orange-500/20 rounded-full blur-[120px]"></div>
+          <div className="absolute w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-orange-500/20 rounded-full blur-[120px]"></div>
           {/* Animated Circle */}
-          <motion.div initial={{ opacity: 0, scale: 0.8 }}animate={{ opacity: 1, scale: 1 }}transition={{ duration: 0.8 }}whileHover={{ scale: 1.05 }}className="relative w-85 h-85 lg:w-95 lg:h-95">
+<motion.div
+  className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+  whileHover={{ scale: 1.05 }}
+>
             {/* Outer Border */}
             <div className="absolute inset-0 rounded-full border-4 border-orange-500 shadow-[0_0_40px_rgba(249,115,22,0.35)]"></div>
             {/* Image */}
