@@ -14,14 +14,13 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#16131D]/80 backdrop-blur-lg border-b border-[#ffffff10]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 w-full overflow-x-hidden bg-[#16131D]/80 backdrop-blur-lg border-b border-white/10">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-
           {/* Logo */}
           <a
-            href="/"
-            className="text-3xl font-bold text-white tracking-wide"
+            href={`${import.meta.env.BASE_URL}`}
+            className="text-3xl font-bold text-white tracking-wide whitespace-nowrap shrink-0"
           >
             <span className="text-white font-bold text-3xl">Husnain</span>
             <span className="text-orange-500 font-bold text-3xl">.</span>
@@ -59,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden bg-[#1B1723] rounded-xl mb-4 p-6">
+          <div className="md:hidden w-full bg-[#1B1723] rounded-2xl mt-2 p-5">
             <div className="flex flex-col gap-5">
               {navLinks.map((link) => (
                 <a
