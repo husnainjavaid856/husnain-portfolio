@@ -76,7 +76,10 @@ const Navbar = () => {
                     className="text-gray-300 hover:text-orange-500 transition"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.25, delay: index * 0.1 }}
+                    transition={{
+                      delay: index * 0.08,
+                      duration: 0.3,
+                    }}
                   >
                     {link.name}
                   </motion.a>
