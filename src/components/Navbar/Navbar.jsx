@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -57,29 +58,37 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {open && (
-          <div className="md:hidden w-full bg-[#1B1723] rounded-2xl mt-2 p-5">
-            <div className="flex flex-col gap-5">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-gray-300 hover:text-orange-500 transition"
-                >
-                  {link.name}
-                </a>
-              ))}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, y: -15, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -15, scale: 0.97 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className="md:hidden w-full bg-[#1B1723] rounded-2xl mt-2 p-5 origin-top"
+            >
+              <div className="flex flex-col gap-5">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="text-gray-300 hover:text-orange-500 transition"
+                  >
+                    {link.name}
+                  </a>
+                ))}
 
-              <a
-                href="#contact"
-                className="mt-3 text-center bg-orange-500 py-3 rounded-full text-white font-semibold hover:bg-orange-600 transition"
-              >
-                Let's Talk
-              </a>
-            </div>
-          </div>
-        )}
+                <a
+                  href="#contact"
+                  className="mt-3 text-center bg-orange-500 py-3 rounded-full text-white font-semibold hover:bg-orange-600 transition"
+                >
+                  Let's Talk
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
