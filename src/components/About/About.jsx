@@ -22,7 +22,7 @@ const About = () => {
           pursuing my Bachelor's degree.
         </motion.p>
 
-        <motion.p initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 1.1 }}viewport={{ once: true }}className="mt-6 text-gray-400 text-lg leading-9 max-w-3xl mx-auto">
+        <motion.p initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 1.1 }}viewport={{ once: true }}className="text-gray-400 mt-2 max-w-xl leading-7">
           I enjoy transforming ideas into responsive, modern, and user-friendly
           web applications. My focus is on writing clean, maintainable code
           while continuously learning new technologies to build meaningful
