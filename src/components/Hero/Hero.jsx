@@ -11,7 +11,7 @@ const Hero = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Frontend Developer", "React Developer", "MERN Developer"],typeSpeed: 40,backSpeed: 40,loop: true,
+      strings: ["Frontend Dev", "React Developer", "MERN Developer"],typeSpeed: 40,backSpeed: 40,loop: true,
     });
     return () => {
       typed.destroy();

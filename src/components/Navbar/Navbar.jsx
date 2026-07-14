@@ -68,15 +68,18 @@ const Navbar = () => {
               className="md:hidden w-full bg-[#1B1723] rounded-2xl mt-2 p-5 origin-top"
             >
               <div className="flex flex-col gap-5">
-                {navLinks.map((link) => (
-                  <a
+                {navLinks.map((link, index) => (
+                  <motion.a
                     key={link.name}
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="text-gray-300 hover:text-orange-500 transition"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.25, delay: index * 0.1 }}
                   >
                     {link.name}
-                  </a>
+                  </motion.a>
                 ))}
 
                 <a
