@@ -10,19 +10,19 @@ const About = () => {
           About Me
         </motion.p>
         {/* Heading */}
-        <motion.h2 initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.7 }}viewport={{ once: true }}className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <motion.h2 initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.7 }}viewport={{ once: true }}className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
           Get to Know{" "}
          <span className="text-orange-500">Me Better</span>
         </motion.h2>
         {/* Main Text */}
-        <motion.p initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.9 }}viewport={{ once: true }}className="mt-8 text-gray-300 text-lg leading-9 max-w-3xl mx-auto">
+        <motion.p initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.9 }}viewport={{ once: true }}className="mt-8 text-gray-300 text-base sm:text-lg leading-8 max-w-3xl mx-auto">
           I'm <span className="text-white font-semibold">Husnain Javaid</span>,
           a passionate <span className="text-orange-500">Frontend</span> and{" "}
           <span className="text-orange-500">MERN Stack Developer</span> currently
           pursuing my Bachelor's degree.
         </motion.p>
 
-        <motion.p initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 1.1 }}viewport={{ once: true }}className="mt-6 text-gray-400 text-lg leading-7 max-w-3xl mx-auto">
+        <motion.p initial={{ opacity: 0, y: 30 }}whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 1.1 }}viewport={{ once: true }}className="mt-6 text-gray-400 text-base sm:text-lg leading-8 max-w-3xl mx-auto">
           I enjoy transforming ideas into responsive, modern, and user-friendly
           web applications. My focus is on writing clean, maintainable code
           while continuously learning new technologies to build meaningful
