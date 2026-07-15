@@ -48,7 +48,7 @@ const Contact = () => {
             <span className="text-orange-500"> Together</span>
           </h2>
 
-          <p className="text-gray-400 mt-5 max-w-2xl mx-auto leading-7 text-base sm:text-lg px-2">
+          <p className="text-gray-400 mt-5 max-w-2xl mx-auto leading-7 text-base px-2">
             Have a project, internship opportunity or just want to say hello?
             Feel free to send me a message.
           </p>
